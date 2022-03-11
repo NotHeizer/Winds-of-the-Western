@@ -1,8 +1,8 @@
-package net.heizer.examplemod.block;
+package net.heizer.wotw.block;
 
-import net.heizer.examplemod.Winds_of_the_Western;
-import net.heizer.examplemod.item.ModItems;
-import net.minecraft.world.entity.ai.behavior.Behavior;
+import net.heizer.wotw.Winds_of_the_Western;
+import net.heizer.wotw.item.WotW_Items;
+import net.heizer.wotw.item.WotW_Creative_Mode_Tab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -16,18 +16,28 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
+public class WotW_Blocks {
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Winds_of_the_Western.MOD_ID);
 
+
+
+    //AGATE BLOCKS
     public static final RegistryObject<Block> AGATE_GEODE = registerBlocks("agate_geode",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(7f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+                    .strength(7f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
 
     public static final RegistryObject<Block> AGATE_BLOCK = registerBlocks("agate_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(9f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+                    .strength(9f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
+
+    //CRATE BLOCKS
+    public static final RegistryObject<Block> OAK_CRATE = registerBlocks("oak_crate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
+
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlocks(String name, Supplier<T> block, CreativeModeTab tab) {
@@ -38,12 +48,14 @@ public class ModBlocks {
 
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                            CreativeModeTab tab) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+        return WotW_Items.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(tab)));
 
     }
 
-    public static void regirster(IEventBus eventBus){
+    public static void register (IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
+
 }
+

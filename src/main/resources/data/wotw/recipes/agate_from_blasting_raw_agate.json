@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "wotw:raw_agate"
+  },
+  "result": "wotw:agate",
+  "experience": 0.9,
+  "cookingtime": 100
+}

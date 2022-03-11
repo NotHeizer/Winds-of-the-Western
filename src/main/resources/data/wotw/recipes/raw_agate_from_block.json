@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "wotw:agate_block"
+    }
+  ],
+  "result": {
+    "item": "wotw:agate",
+    "count": 9
+  }
+}

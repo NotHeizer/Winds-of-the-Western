@@ -1,8 +1,17 @@
 {
   "item.wotw.raw_agate": "Raw Agate",
-  "item.wotw.agate_gemgot": "Agate Gemgot",
+  "item.wotw.agate": "Agate",
+  "item.wotw.wooden_spear": "Wooden Spear",
+  "item.wotw.stone_spear": "Stone Spear",
+  "item.wotw.golden_spear": "Golden Spear",
+  "item.wotw.iron_spear": "Iron Spear",
+  "item.wotw.diamond_spear": "Diamond Spear",
+  "item.wotw.netherite_spear": "Netherite Spear",
 
   "block.wotw.agate_geode": "Agate Geode",
-  "block.wotw.agate_block": "Agate Block"
+  "block.wotw.agate_block": "Agate Block",
+  "block.wotw.oak_crate": "Oak Crate",
+
+  "itemGroup.winds_of_the_westtab": "Winds of the West"
 
 }
