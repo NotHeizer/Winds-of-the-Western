@@ -8,9 +8,18 @@
   "item.wotw.diamond_spear": "Diamond Spear",
   "item.wotw.netherite_spear": "Netherite Spear",
 
+  "item.wofw.longbow": "Long Bow",
+
   "block.wotw.agate_geode": "Agate Geode",
   "block.wotw.agate_block": "Agate Block",
+
   "block.wotw.oak_crate": "Oak Crate",
+  "block.wotw.acacia_crate": "Acacia Crate",
+  "block.wotw.birch_crate": "Birch Crate",
+  "block.wotw.dark_oak_crate": "Dark Oak Crate",
+  "block.wotw.spruce_crate": "Spruce Crate",
+  "block.wotw.crimson_crate": "Crimson Crate",
+  "block.wotw.warped_crate": "Warped Crate",
 
   "itemGroup.winds_of_the_westtab": "Winds of the West"
 

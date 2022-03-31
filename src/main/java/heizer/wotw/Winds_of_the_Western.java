@@ -1,20 +1,22 @@
-package net.heizer.wotw;
+package heizer.wotw;
 
-import net.heizer.wotw.block.WotW_Blocks;
-import net.heizer.wotw.item.WotW_Items;
+import heizer.wotw.blocks.WotW_Blocks;
+import heizer.wotw.items.WotW_Items;
+import heizer.wotw.items.util.WotW_Item_Properties;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+
 @Mod(Winds_of_the_Western.MOD_ID)
 public class Winds_of_the_Western {
-    // Directly reference a log4j logger.
+
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "wotw";
 
@@ -26,9 +28,16 @@ public class Winds_of_the_Western {
 
 
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+
+        WotW_Item_Properties.addCustomItemPrperties();
+
     }
 
     private void setup(final FMLCommonSetupEvent event) {

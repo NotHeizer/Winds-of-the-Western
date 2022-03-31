@@ -1,0 +1,6 @@
+{
+  "parent": "wotw:item/longbow",
+  "textures": {
+    "layer0": "wotw:item/longbow_pulling_2"
+  }
+}

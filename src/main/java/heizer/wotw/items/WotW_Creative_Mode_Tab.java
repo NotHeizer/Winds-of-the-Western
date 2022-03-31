@@ -1,4 +1,4 @@
-package net.heizer.wotw.item;
+package heizer.wotw.items;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

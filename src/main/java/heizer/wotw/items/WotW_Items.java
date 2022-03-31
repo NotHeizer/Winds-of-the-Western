@@ -1,6 +1,8 @@
-package net.heizer.wotw.item;
+package heizer.wotw.items;
 
-import net.heizer.wotw.Winds_of_the_Western;
+import heizer.wotw.Winds_of_the_Western;
+import net.minecraft.world.item.ArrowItem;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,6 +41,13 @@ public class WotW_Items {
 
     public static final RegistryObject<Item> NETHERITE_SPEAR = ITEMS.register("netherite_spear",
             () -> new Item(new Item.Properties().tab(WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST)));
+
+    //Long Bow Item
+    public static final RegistryObject<Item> LONGBOW = ITEMS.register("longbow",
+            () -> new BowItem(new Item.Properties().tab(WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST).durability(465)));
+
+    public static final RegistryObject<Item> BIG_BULLET = ITEMS.register("big_bullet",
+            () -> new ArrowItem(new Item.Properties().tab(WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST)));
 
 
 

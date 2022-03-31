@@ -1,8 +1,8 @@
-package net.heizer.wotw.block;
+package heizer.wotw.blocks;
 
-import net.heizer.wotw.Winds_of_the_Western;
-import net.heizer.wotw.item.WotW_Items;
-import net.heizer.wotw.item.WotW_Creative_Mode_Tab;
+import heizer.wotw.Winds_of_the_Western;
+import heizer.wotw.items.WotW_Creative_Mode_Tab;
+import heizer.wotw.items.WotW_Items;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -34,6 +34,30 @@ public class WotW_Blocks {
 
     //CRATE BLOCKS
     public static final RegistryObject<Block> OAK_CRATE = registerBlocks("oak_crate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
+
+    public static final RegistryObject<Block> ACACIA_CRATE = registerBlocks("acacia_crate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
+
+    public static final RegistryObject<Block> BIRCH_CRATE = registerBlocks("birch_crate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
+
+    public static final RegistryObject<Block> DARK_OAK_CRATE = registerBlocks("dark_oak_crate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
+
+    public static final RegistryObject<Block> SPRUCE_CRATE = registerBlocks("spruce_crate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
+
+    public static final RegistryObject<Block> CRIMSON_CRATE = registerBlocks("crimson_crate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
+
+    public static final RegistryObject<Block> WARPED_CRATE = registerBlocks("warped_crate",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(5f).requiresCorrectToolForDrops()), WotW_Creative_Mode_Tab.WINDS_OF_THE_WEST);
 
