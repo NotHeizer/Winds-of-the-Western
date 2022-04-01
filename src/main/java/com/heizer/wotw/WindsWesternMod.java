@@ -1,8 +1,8 @@
-package heizer.wotw;
+package com.heizer.wotw;
 
-import heizer.wotw.blocks.WotW_Blocks;
-import heizer.wotw.items.WotW_Items;
-import heizer.wotw.items.util.WotW_Item_Properties;
+import com.heizer.wotw.block.WindsWesternModBlocks;
+import com.heizer.wotw.item.WindsWesternModItems;
+import com.heizer.wotw.item.util.WindsWesternModItemsProperties;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,17 +14,17 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-@Mod(Winds_of_the_Western.MOD_ID)
-public class Winds_of_the_Western {
+@Mod(WindsWesternMod.MOD_ID)
+public class WindsWesternMod {
 
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "wotw";
 
-    public Winds_of_the_Western() {
+    public WindsWesternMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        WotW_Items.register(eventBus);
-        WotW_Blocks.register(eventBus);
+        WindsWesternModItems.register(eventBus);
+        WindsWesternModBlocks.register(eventBus);
 
 
         eventBus.addListener(this::setup);
@@ -35,9 +35,7 @@ public class Winds_of_the_Western {
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
-
-        WotW_Item_Properties.addCustomItemPrperties();
-
+        WindsWesternModItemsProperties.addCustomItemPrperties();
     }
 
     private void setup(final FMLCommonSetupEvent event) {
