@@ -1,0 +1,29 @@
+{
+  "item.wotw.raw_agate": "Rohes Achat",
+  "item.wotw.agate": "Achat",
+
+  "item.wotw.wooden_spear": "Holz Speer",
+  "item.wotw.stone_spear": "Stein Speer",
+  "item.wotw.golden_spear": "Gold Speer",
+  "item.wotw.iron_spear": "Eisen Speer",
+  "item.wotw.diamond_spear": "Diamant Speer",
+  "item.wotw.netherite_spear": "Netherite Speer",
+
+  "item.wofw.longbow": "Lang Bogen",
+
+  "block.wotw.agate_geode": "Achat Geode",
+  "block.wotw.agate_block": "Achatblock",
+
+  "block.wotw.oak_crate": "Eichenbretter Kiste",
+  "block.wotw.acacia_crate": "Akazienbretter Kiste",
+  "block.wotw.birch_crate": "Birkenbretter Kiste",
+  "block.wotw.dark_oak_crate": "Schwarzeichenbretter Kiste",
+  "block.wotw.spruce_crate": "Fichtenbretter Kiste",
+  "block.wotw.crimson_crate": "Karmesinbretter Kiste",
+  "block.wotw.warped_crate": "Wirrbretter Kasten",
+
+  "entity.wotw.bison": "Bison",
+
+  "itemGroup.winds_of_the_westtab": "Winde aus dem Westen"
+
+}

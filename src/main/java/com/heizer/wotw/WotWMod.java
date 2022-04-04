@@ -1,8 +1,12 @@
 package com.heizer.wotw;
 
-import com.heizer.wotw.block.WindsWesternModBlocks;
-import com.heizer.wotw.item.WindsWesternModItems;
-import com.heizer.wotw.item.util.WindsWesternModItemsProperties;
+import com.heizer.wotw.block.WotWModBlocks;
+import com.heizer.wotw.entity.WotWModEntityTypes;
+import com.heizer.wotw.entity.client.model.BisonModel;
+import com.heizer.wotw.entity.client.renderer.BisonRenderer;
+import com.heizer.wotw.item.WotWModItems;
+import com.heizer.wotw.item.util.WotWModItemsProperties;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,33 +18,28 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-@Mod(WindsWesternMod.MOD_ID)
-public class WindsWesternMod {
+@Mod(WotWMod.MOD_ID)
+public class WotWMod {
 
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "wotw";
 
-    public WindsWesternMod() {
+    public WotWMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        WindsWesternModItems.register(eventBus);
-        WindsWesternModBlocks.register(eventBus);
+        //Register Classes
+        WotWModItems.register(eventBus);
+        WotWModBlocks.register(eventBus);
+        WotWModEntityTypes.register(eventBus);
 
-
-        eventBus.addListener(this::setup);
+        //Client Setup
         eventBus.addListener(this::clientSetup);
-
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
-        WindsWesternModItemsProperties.addCustomItemPrperties();
-    }
 
-    private void setup(final FMLCommonSetupEvent event) {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        WotWModItemsProperties.addCustomItemPrperties();
+        EntityRenderers.register(WotWModEntityTypes.BISON.get(), BisonRenderer::new);
     }
 }

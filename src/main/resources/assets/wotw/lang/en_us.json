@@ -1,6 +1,7 @@
 {
   "item.wotw.raw_agate": "Raw Agate",
   "item.wotw.agate": "Agate",
+
   "item.wotw.wooden_spear": "Wooden Spear",
   "item.wotw.stone_spear": "Stone Spear",
   "item.wotw.golden_spear": "Golden Spear",
@@ -11,7 +12,7 @@
   "item.wofw.longbow": "Long Bow",
 
   "block.wotw.agate_geode": "Agate Geode",
-  "block.wotw.agate_block": "Agate Block",
+  "block.wotw.agate_block": "Agateblock",
 
   "block.wotw.oak_crate": "Oak Crate",
   "block.wotw.acacia_crate": "Acacia Crate",
@@ -21,6 +22,8 @@
   "block.wotw.crimson_crate": "Crimson Crate",
   "block.wotw.warped_crate": "Warped Crate",
 
-  "itemGroup.winds_of_the_westtab": "Winds of the West"
+  "entity.wotw.bison": "Bison",
+
+  "itemGroup.winds_of_the_westtab": "Winds of the Western"
 
 }

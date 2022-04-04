@@ -1,27 +1,27 @@
 modLoader="javafml"
-loaderVersion="[39,)"
-license="MIT"
+loaderVersion="[40,)"
+license="All rights reserved"
 [[mods]]
 modId="wotw"
 #Version of the mod
 version="1.0.0"
 displayName="Winds of the Western"
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
-logoFile="examplemod.png" #optional
-credits="To Toma, Lyof and Aqu for the base idea and the mental support XD" #optional
-authors="Heizer, YeoXuHang
+logoFile="logo.png" #optional
+credits="Credits to YeoXuHang who is also in Author!" #optional
+authors="Heizer, YeoXuHang"
 description='''
-Winds of the Western is a Mod that adds Block, items and weapons all around the Western and the Nativ Americans. From new Building Blocks over Guns and Bows up to new Entitys, you will see them here! Have fun and dive into the new World where the Winds are blowing from the west!
+This Mod brings a lot of stuff from the Wild Western into the Game. Including Blocks, Items Entities and more, there are things for everyone!
 '''
 [[dependencies.wotw]]
     modId="forge"
     mandatory=true
-    versionRange="[39,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.wotw]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.1,1.19)"
+    versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
