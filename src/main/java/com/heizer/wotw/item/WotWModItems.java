@@ -30,7 +30,7 @@ public class WotWModItems {
             () -> new Item(new Item.Properties().tab(WotWModTabs.WINDS_OF_THE_WEST)));
 
     public static final RegistryObject<Item> STONE_SPEAR = ITEMS.register("stone_spear",
-            () -> new Item(new Item.Properties().tab(WotWModTabs.WINDS_OF_THE_WEST)));
+            () -> new Item(new Item.Properties().durability(256).tab(WotWModTabs.WINDS_OF_THE_WEST)));
 
     public static final RegistryObject<Item> GOLDEN_SPEAR = ITEMS.register("golden_spear",
             () -> new Item(new Item.Properties().tab(WotWModTabs.WINDS_OF_THE_WEST)));
@@ -60,8 +60,10 @@ public class WotWModItems {
             () -> new ForgeSpawnEggItem(WotWModEntityTypes.BISON,3498527, 8306817,
                     new Item.Properties().tab(WotWModTabs.WINDS_OF_THE_WEST)));
 
-
-
+    //Spawn Eggs
+    public static final RegistryObject<Item> EXAMPLE_SPAWN_EGG = ITEMS.register("example_spawn_egg",
+            () -> new ForgeSpawnEggItem(WotWModEntityTypes.EXAMPLE,3498527, 8306817,
+                    new Item.Properties().tab(WotWModTabs.WINDS_OF_THE_WEST)));
 
     public static void register (IEventBus eventBus) {
         ITEMS.register(eventBus);

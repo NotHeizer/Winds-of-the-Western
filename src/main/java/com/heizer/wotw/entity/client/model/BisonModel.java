@@ -13,7 +13,7 @@ import net.minecraft.world.entity.Entity;
 
 public class BisonModel<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("WotWMod", "bison"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("wotw", "bison"), "main");
 	private final ModelPart Bison;
 	//Bison Legs
 	private ModelPart leg0;
