@@ -4,6 +4,7 @@ import com.heizer.wotw.entity.WotWModEntityTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -21,23 +22,22 @@ public class BisonEntity extends Animal {
     }
 
     public static AttributeSupplier setAttributes() {
-        return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 30.0D)
+        return Mob.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 48.0D)
                 .add(Attributes.ATTACK_DAMAGE, 2.0f)
-                .add(Attributes.ATTACK_SPEED, 050f)
-                .add(Attributes.MOVEMENT_SPEED, 0.6f)
+                .add(Attributes.ATTACK_SPEED, 0.50f)
+                .add(Attributes.MOVEMENT_SPEED, 0.4f)
                 .add(Attributes.FOLLOW_RANGE, 100D)
                 .build();
     }
 
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 8.0F));
+        this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 0.7D));
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 0.5D));
         this.goalSelector.addGoal(3, new BreedGoal(this, 0.9D));
-
     }
 
     @Nullable
