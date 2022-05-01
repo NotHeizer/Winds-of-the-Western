@@ -14,10 +14,10 @@ import net.minecraft.world.entity.Entity;
 import org.lwjgl.system.CallbackI;
 
 public class BisonModel<T extends Entity> extends EntityModel<T> {
-	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
+
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(WotWMod.MOD_ID, "bison"), "main");
 	private final ModelPart root;
-    private final ModelPart Bison;
+	private final ModelPart Bison;
 	//Bison Legs
 	private ModelPart leg0;
 	private ModelPart leg1;
@@ -25,13 +25,13 @@ public class BisonModel<T extends Entity> extends EntityModel<T> {
 	private ModelPart leg3;
 
 	public BisonModel(ModelPart root) {
-        this.root = root;
+		this.root = root;
 		this.Bison = root.getChild("Bison");
-        this.leg0 = Bison.getChild("leg0");
-        this.leg1 = Bison.getChild("leg1");
-        this.leg2 = Bison.getChild("leg2");
-        this.leg3 = Bison.getChild("leg3");
-    }
+		this.leg0 = Bison.getChild("leg0");
+		this.leg1 = Bison.getChild("leg1");
+		this.leg2 = Bison.getChild("leg2");
+		this.leg3 = Bison.getChild("leg3");
+	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();

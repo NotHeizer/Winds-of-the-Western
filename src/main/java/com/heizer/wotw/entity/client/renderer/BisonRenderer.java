@@ -15,7 +15,8 @@ public class BisonRenderer extends MobRenderer<BisonEntity, BisonModel<BisonEnti
         protected static final ResourceLocation BABY = new ResourceLocation(WotWMod.MOD_ID,
                 "textures/entity/bison/bison_baby.png");
 
-        public BisonRenderer(EntityRendererProvider.Context context) {
+        public BisonRenderer(EntityRendererProvider.Context context) 
+        {
             super(context, new BisonModel<>(context.bakeLayer(BisonModel.LAYER_LOCATION)), 0.7F);
             this.addLayer(new LayerBisonSaddleRenderer(this));
         }
