@@ -2,6 +2,7 @@ package com.heizer.wotw.entity.client.renderer;
 
 import com.heizer.wotw.WotWMod;
 import com.heizer.wotw.entity.client.model.BisonModel;
+import com.heizer.wotw.entity.client.renderer.layer.LayerBisonSaddleRenderer;
 import com.heizer.wotw.entity.custom.BisonEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -16,6 +17,7 @@ public class BisonRenderer extends MobRenderer<BisonEntity, BisonModel<BisonEnti
 
         public BisonRenderer(EntityRendererProvider.Context context) {
             super(context, new BisonModel<>(context.bakeLayer(BisonModel.LAYER_LOCATION)), 0.7F);
+            this.addLayer(new LayerBisonSaddleRenderer(this));
         }
 
         @Override
